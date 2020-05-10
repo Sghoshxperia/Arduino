@@ -50,42 +50,10 @@ void loop()
   Serial.print((Y_val));
   Serial.println(" | ");
   delay(200);*/
-
-int remap = abs(abs(X_val)-abs(Y_val));
-
-  Serial.println(remap);
-
-  double theta=0.00;
-
-  theta = atan2(Y_val, X_val);
- // Serial.println(theta);
-  delay(200);
-
-  analogWrite(LeftB,remap);
-  analogWrite(LeftF,remap);
-
-
-
-
-
-  //digitalWrite(LeftB,HIGH);
- // digitalWrite(LeftF,LOW);
-  //digitalWrite(RightB,HIGH);
- // digitalWrite(RightF,LOW);
-        
- /* int Y_val = analogRead(X_pin);
-  int X_val = analogRead(Y_pin);
-
-
-  
-
-  
+ 
   //Serial.print(Y_val);
   //Serial.print(" ");
   //Serial.println(X_val);
- 
-  X_val = map(X_val, 0, 1023, -255, 255);
-  Y_val = map(Y_val, 0, 1023, -255, 255); 
 
    //Serial.print(X_val);
    //Serial.print(" ");
@@ -265,42 +233,6 @@ if(abs(X_val)<=10&&abs(Y_val)<=10)
    
   } 
 
- /* if((X_val==Y_val)&&(X_val<0&&Y_val<0))     //theta=-2.36
-  {
- 
-     analogWrite(LeftB,0);
-     analogWrite(LeftF,0);
-     analogWrite(RightF,0); 
-     analogWrite(RightB,abs(X_val));
-
-     
-
-     Serial.print("0");
-     Serial.print(" ");
-     Serial.println(abs(Y_val));
-    
-   }
-
-  // int theta_new=0;
-  // theta_new  = (int)(theta*10);
-
-    /*if((X_val==abs(Y_val))&&(X_val>0&&Y_val<0))    //theta=-0.79
-  {
-     analogWrite(LeftB,abs(X_val));
-     analogWrite(LeftF,0);
-     analogWrite(RightF,0); 
-     analogWrite(RightB,0);
-    
-     
-
-    
-
-     Serial.print(abs(Y_val));
-     Serial.print("  ");
-     Serial.println("0");
-     
-    
-}*/
   
 //Serial.println(theta);
 
@@ -309,13 +241,5 @@ if(abs(X_val)<=10&&abs(Y_val)<=10)
   //delay(500);
 
   //switching of quadrants
-
-
-     
-    
-  
-
-
-
 
 }
